@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="Encritador.js"></script>
+        <title>Encriptador</title>
+        <link rel="shortcut icon" href="imagenes/HN.png" type="image/x-icon">
+        <link rel="stylesheet" href="reset.css/reset.css">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    
+    <body>
+        <header>
+            <h1 class="logo"><img src="imagenes/HN.png" alt="logo"></h1>
+        </header>
+
+        <main>
+            <textarea class="textoencriptado" id="textoencriptado" placeholder="ingrese el texto aqui..." cols="30" rows="10"></textarea>
+            <p class="terminos">&#42; Solo letras minusculas y sin acentos</p>
+            <div class="botones">
+                <button type="button" class="b_encriptar" id="botonencriptado">Encriptar</button>
+                <button type="button" class="b_desencriptar" id="botondesencriptado">Desencriptar</button>
+            </div>
+            <div class="cuadroresultado">
+                <img class="ilustracion" src="imagenes/illustration.png">
+                <h2 class="titulo-mensaje" id="titulo-mensaje">Ningun mensaje fue encontrado</h2>
+                <textarea name="resultado"  class="textodesencriptado" id="textodesencriptado" cols="30" rows="10"></textarea>
+                <p class="parrafo" id="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button type="button" class="b_copiar" id="botoncopiar">Copiar</button>
+            </div>
+            
+        </main>
+    </body>
+    <script>
+        var btn = document.querySelector("#botonencriptado");
+        btn.onclick = encriptar;
+        var btn2 = document.querySelector("#botondesencriptado");
+        btn2.onclick = desencriptar;
+        var btn3 = document.querySelector("#botoncopiar");
+        btn3.onclick = copiar;
+    </script>
+       
+</html>        
